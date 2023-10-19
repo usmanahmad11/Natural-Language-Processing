@@ -54,6 +54,14 @@ spam_detect_model = MultinomialNB().fit(X_train, y_train)
 
 y_pred=spam_detect_model.predict(X_test)
 
+# Evaluation of the model 
+
+from sklearn.metrics import confusion_matrix
+confusion_m =confusion_matrix(y_test,y_pred)
+
+from sklearn.metric import accuracy_score
+accuracy = accuracy_score(y_test,y_pred)
+
 
 
 
